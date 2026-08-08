@@ -2,6 +2,11 @@
 
 A machine learning project that predicts whether a financial transaction is fraudulent, with results served through an interactive Streamlit interface.
 
+
+https://github.com/user-attachments/assets/7e68939c-a82c-4db9-9ddd-ac99e55b70a0
+
+
+
 ## Overview
 
 This project applies a supervised classification model to detect fraudulent transactions in financial data. The full pipeline — exploratory data analysis, preprocessing, and model training — was developed in a Jupyter notebook, and the trained model was then integrated into a Streamlit application for interactive predictions.
