@@ -10,7 +10,7 @@ st.markdown('Please enter the transaction details and use the predict button')
 
 st.divider()
 
-transaction_type = st.selectbox('Transaction Type', ['PAYMENT', 'TRANSFER', 'CASH_OUT', 'DEPOSIT'])
+transaction_type = st.selectbox('Transaction Type', ['PAYMENT', 'TRANSFER', 'CASH_OUT', 'CASH_IN'])
 
 amount = st.number_input('Amount', min_value=0.0, value=1000.0)
 old_balanceOrg = st.number_input('Old Balance (Sender)', min_value=0.0, value=10000.0)
@@ -32,7 +32,8 @@ if st.button('Predict'):
 
     prediction = model.predict(input_data)[0]
 
-    st.subheader(f'Prediction: "{int(prediction)}"')
+    fraud_txt = 'Fraud' if int(prediction) == 1 else 'Not Fraud'
+    st.subheader(f'Prediction: "{fraud_txt}"')
 
     if prediction == 1:
         st.error('This transaction can be fraud')

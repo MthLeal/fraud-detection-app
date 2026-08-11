@@ -15,14 +15,15 @@ This project applies a supervised classification model to detect fraudulent tran
 
 The model was trained on the [Fraud Detection Dataset](https://www.kaggle.com/datasets/amanalisiddiqui/fraud-detection-dataset) from Kaggle, a tabular dataset with over 6.3 million transaction records for binary fraud classification.
 
-## Model
+## Best Model
 
-- **Algorithm:** Logistic Regression
-- **Recall:** 0.94
+- **Algorithm:** Random Forest
+- **Recall:** 0.98
+- **F1 Score:** 0.41
+- **AUC-ROC:** 0.99
 
 Given the highly imbalanced nature of fraud detection datasets (fraudulent transactions are a small minority), **recall** was prioritized as the key evaluation metric, since minimizing false negatives (missed fraud cases) is typically more critical than minimizing false positives in this context.
 
-> **Note:** No resampling or class-weighting technique (e.g., SMOTE, class_weight='balanced') was applied during training. This is a known limitation — see [Future Improvements](#future-improvements).
 
 ## Tech Stack
 
@@ -77,9 +78,6 @@ The application will open in your browser, where you can input transaction data 
 
 ## Future Improvements
 
-- Apply resampling techniques (SMOTE, undersampling) or class-weighting to address class imbalance
-- Evaluate and report additional metrics (precision, F1-score, AUC-ROC, confusion matrix)
-- Experiment with alternative models (Random Forest, XGBoost) for comparison
 - Deploy the app to Streamlit Community Cloud for public access
 
 ## License
