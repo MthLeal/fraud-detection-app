@@ -66,6 +66,12 @@ pip install -r requirements.txt
 
 ## Usage
 
+### Web App
+
+Access the [deployed app](https://fraud-detection-mth.streamlit.app/)
+
+### Local App
+
 Run the Streamlit app locally:
 
 ```bash
@@ -73,12 +79,6 @@ streamlit run fraud_detection.py
 ```
 
 The application will open in your browser, where you can input transaction data and receive a real-time fraud prediction from the trained model.
-
-> Currently, the app runs locally only and is not deployed to a hosting service.
-
-## Future Improvements
-
-- Deploy the app to Streamlit Community Cloud for public access
 
 ## License
 
